@@ -135,6 +135,24 @@
       "kind": "independent-byte-comparison",
       "summary": "Seven selected file/Ghidra regions matched; decompiler presentation and raw control flow were reconciled.",
       "reference": "docs/milestones/M1-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m1-state-processor",
+      "kind": "focal-static-decompilation",
+      "summary": "Completed the bounded state-processor trace and a byte-correlated focal decompile. Selected constants are proved; indirect target remains unresolved.",
+      "reference": "docs/milestones/M1-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m1-restored-layout",
+      "kind": "static-layout-correlation",
+      "summary": "Ten matching section layouts plus PE metadata support common protected/restored layout, not decoded-code equality or crypto semantics.",
+      "reference": "docs/milestones/M1-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m1-passive-bootstrap",
+      "kind": "passive-container-and-static-analysis",
+      "summary": "Embedded MSI and service/control programs extracted as data; modular session boundaries recorded, no installation or key recovery.",
+      "reference": "docs/milestones/M1-2026-11-04.md#evidence"
     }
   ],
   "sectors": [
@@ -519,7 +537,17 @@
       "fileToGhidraRegionsCompared": 7,
       "fileToGhidraRegionsIdentical": 7,
       "loaderObservedContextAssignments": 38,
-      "contextObjectDereferenceProven": false
+      "contextObjectDereferenceProven": false,
+      "stateProcessorBytesCompared": 53849,
+      "stateProcessorGhidraInstructions": 13047,
+      "boundedMultiFunctionTraceInstructions": 13139,
+      "stateProcessorDecompilerCompleted": true,
+      "stateProcessorIndirectTargetResolved": false,
+      "restoredLayoutMatchingSections": 10,
+      "restoredDecodedCodeIdentityVerified": false,
+      "bootstrapProgramsExtractedPassively": 2,
+      "bootstrapProgramsExecuted": false,
+      "bootstrapNewKeyCandidates": 0
     }
   }
 }

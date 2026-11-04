@@ -24,7 +24,7 @@ This repository is the **public development record**. Game files, recovered game
 
 <p><img src="media/progress.svg" alt="Sector checklist progress. This measures completed listed tasks, not game completion." width="100%"></p>
 
-The encrypted source containers still need matching archive inputs: the published key candidate tested did not mount this build, and current-build mappings remain unresolved. The isolated source copy matches all 308 file sizes and 98 selected executable/index hashes; UCAS bulk SHA-256 verification has not been performed. The public community catalog is explicitly labeled `PUBLIC_COMMUNITY_EXPORT_NOT_LOCAL_DECODE`; its 18,659 exports are not evidence of newly decoded local assets or recovered native function bodies.
+The encrypted source containers still need matching archive inputs: the 54-candidate audit returned no match on either tested index with either validator, and current-build mappings remain unresolved. The isolated source copy matches all 308 file sizes and 98 selected executable/index hashes; UCAS bulk SHA-256 verification has not been performed. The public community catalog is explicitly labeled `PUBLIC_COMMUNITY_EXPORT_NOT_LOCAL_DECODE`; its 18,659 exports are not evidence of newly decoded local assets or recovered native function bodies.
 
 ## How progress is measured
 
