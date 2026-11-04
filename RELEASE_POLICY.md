@@ -19,4 +19,4 @@ A future playable-build release requires separate decisions about distribution r
 
 Use an explicit development/pre-release version, identify the exact implementation/content build, state which platforms and devices were exercised, and list the material missing behavior. A release cannot claim working independent multiplayer without a recorded multi-client session.
 
-No software-build release is available at M0.
+No software-build release is available at M1.

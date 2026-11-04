@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-04 — M1: static bootstrap and archive-access investigation
+
+- Traced selected loader and launcher boundaries in private Ghidra projects; no target program/service was executed.
+- Confirmed two AES instruction routines with unresolved incoming key provenance and unproven archive relation.
+- Reconciled seven raw-file/Ghidra memory regions and the entry wrapper presentation.
+- Rejected 54 supplied candidates on two real encrypted indices with independent validators; no current key recovered.
+- Corrected M0 filename-based wording: 17 standard Unreal PAKs plus 58 Chromium DataPacks, not 75 Unreal archives.
+- Recorded a bounded expanded-key-schedule search and normal clear crash-reporter index mount; neither establishes game recovery.
+- Checklist task completions remain unchanged; no native game, server or iPhone runtime milestone is claimed.
+
 ## 2026-11-04 — M0: research and private recovery lab opened
 
 - Announced DogWars Mobile as an unofficial iPhone-first research and reconstruction effort.

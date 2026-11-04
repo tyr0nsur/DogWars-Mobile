@@ -8,11 +8,13 @@ DogWars Mobile has started investigating how WARDOGS could be reconstructed and 
 
 This repository is the **public development record**. Game files, recovered game material, private implementation source, credentials and raw lab logs stay outside it. This is an unofficial project, with no affiliation or endorsement from BULKHEAD, Team17, Epic Games or Apple.
 
+**Latest checkpoint: [M1 — static bootstrap and archive-access investigation](docs/milestones/M1-2026-11-04.md).** Startup boundaries and two AES routines have been investigated; the current archive key remains unresolved. The archive inventory now distinguishes 17 Unreal PAKs from 58 Chromium resource packs.
+
 | Current status — 4 November 2026 | Evidence boundary |
 | --- | --- |
-| Research and private recovery lab started | Source metadata and public tool documentation reviewed |
+| Static bootstrap and archive-access investigation | Bounded Ghidra traces, format validation and independent candidate checks |
 | Offline extractor built; recovery tools and private Unreal host staged | Tool builds and grouped static checks; no game or Unreal compilation yet |
-| Versioned source package inventory produced | 308 files; 75 PAK containers; 17 IoStore TOCs; chunk entries are not assets |
+| Versioned source package inventory produced | 308 files; 17 Unreal PAKs, 58 Chromium DataPacks and 17 IoStore TOCs; chunk entries are not assets |
 | Public community data catalog parsed | 6,864 JSON files; public exports, not fresh local game decoding |
 | Keyless source export | Two optional raw texture bulk payloads; no reconstructed texture, geometry or playable assets |
 | Playable WARDOGS-derived game build | **Not available** |
@@ -32,6 +34,7 @@ The source of truth is [data/progress.json](data/progress.json), with its [schem
 
 ## Milestones and releases
 
+- [M1 — Static bootstrap and archive-access investigation](docs/milestones/M1-2026-11-04.md): loader/session boundaries, AES helper evidence and a corrected package inventory.
 - [M0 — Research and recovery lab opened](docs/milestones/M0-2026-11-04.md): the initial public checkpoint.
 - **Next — Recovery inventory:** establish version-compatible package inputs, produce extraction/dependency receipts and identify unsupported content.
 - **Then — Reconstructed editor content and native integration:** bring supported assets and required game classes into the private Unreal project.
@@ -52,4 +55,4 @@ Announcements belong in this README, the [milestone record](docs/milestones/) an
 
 ## Español
 
-**DogWars Mobile ha comenzado su fase de investigación y recuperación privada, con iPhone como primer objetivo.** Este repositorio publica avances y evidencia resumida. Todavía no hay un juego completo, una IPA disponible, pruebas en iPhone ni un servidor independiente validado. Las barras miden tareas concretas de cada sector; no representan el porcentaje del juego porteado. El código de implementación y los archivos del juego permanecen privados.
+**DogWars Mobile continúa la investigación privada, con iPhone como primer objetivo. El hito M1 documenta el arranque protegido y la revisión de candidatos; la clave actual sigue sin recuperarse.** Este repositorio publica avances y evidencia resumida. Todavía no hay un juego completo, una IPA disponible, pruebas en iPhone ni un servidor independiente validado. Las barras miden tareas concretas de cada sector; no representan el porcentaje del juego porteado. El código de implementación y los archivos del juego permanecen privados.
