@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+<title id="title">DogWars Mobile — research and private recovery lab</title>
+<desc id="desc">Original abstract vector project art. iPhone is the first target. No playable game or IPA is available.</desc>
+<defs><linearGradient id="shade" x2="1" y2="1"><stop stop-color="#101b21"/><stop offset="1" stop-color="#080e13"/></linearGradient></defs>
+<rect width="1600" height="520" rx="24" fill="url(#shade)"/>
+<g fill="none" stroke="#a9c6b8" stroke-opacity=".07"><path d="M0 0V520"/><path d="M80 0V520"/><path d="M160 0V520"/><path d="M240 0V520"/><path d="M320 0V520"/><path d="M400 0V520"/><path d="M480 0V520"/><path d="M560 0V520"/><path d="M640 0V520"/><path d="M720 0V520"/><path d="M800 0V520"/><path d="M880 0V520"/><path d="M960 0V520"/><path d="M1040 0V520"/><path d="M1120 0V520"/><path d="M1200 0V520"/><path d="M1280 0V520"/><path d="M1360 0V520"/><path d="M1440 0V520"/><path d="M1520 0V520"/><path d="M1600 0V520"/><path d="M0 0H1600"/><path d="M0 80H1600"/><path d="M0 160H1600"/><path d="M0 240H1600"/><path d="M0 320H1600"/><path d="M0 400H1600"/><path d="M0 480H1600"/></g>
+<path d="M0 0H1600V14H0Z" fill="#c2f265"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<rect x="72" y="66" width="286" height="36" rx="18" fill="#c2f265"/>
+<text x="92" y="90" font-size="17" font-weight="700" letter-spacing="2" fill="#101b21">IPHONE FIRST / LAB OPEN</text>
+<text x="66" y="218" font-size="118" font-weight="800" letter-spacing="-5" fill="#f0f5ed">DOGWARS</text>
+<text x="72" y="308" font-size="90" font-weight="300" letter-spacing="12" fill="#c2f265">MOBILE</text>
+<path d="M74 345H815" stroke="#d4e6de" stroke-opacity=".26"/>
+<text x="74" y="385" font-size="24" fill="#c5d0cb">Port research. Private reconstruction. Public milestones.</text>
+<text x="74" y="458" font-size="17" letter-spacing="2" fill="#91a89d">TRN STUDIO / UNOFFICIAL PROJECT</text>
+<text x="1480" y="458" text-anchor="end" font-size="16" letter-spacing="2" fill="#91a89d">DOCUMENTATION ONLY</text>
+</g>
+<g transform="translate(1212 235)" fill="none">
+<circle r="168" stroke="#c2f265" stroke-opacity=".15"/>
+<circle r="135" stroke="#c2f265" stroke-opacity=".2" stroke-dasharray="5 12"/>
+<path d="M-205 0H-147M147 0H205M0-205V-147M0 147V205" stroke="#c2f265" stroke-opacity=".5"/>
+<!-- Original geometric canine motif; no game/logo artwork is used. -->
+<path d="M-100-100L-78 27L-43 88L0 120L43 88L78 27L100-100L35-62L0-81L-35-62Z" fill="#c2f265" fill-opacity=".05" stroke="#c2f265" stroke-width="3"/>
+<path d="M-100-100L-35-62L-64-13M100-100L35-62L64-13M-78 27L-26 10L0 54L26 10L78 27M-43 88L0 54L43 88M0 54V120" stroke="#c2f265" stroke-width="3"/>
+<path d="M-54 20L-29 25M29 25L54 20" stroke="#ff9d58" stroke-width="6"/>
+<path d="M-12 59H12L0 72Z" fill="#ff9d58"/>
+</g></svg>

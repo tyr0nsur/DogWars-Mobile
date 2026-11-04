@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tyr0nsur/DogWars-Mobile/blob/main/data/progress.schema.json",
+  "title": "DogWars Mobile public milestone checklist",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "project",
+    "updated",
+    "scopeVersion",
+    "stage",
+    "target",
+    "overallGameCompletionPercent",
+    "overallCompletionReason",
+    "nativeIphoneTested",
+    "playableGameBuildAvailable",
+    "ipaAvailable",
+    "sourceReference",
+    "measurement",
+    "receipts",
+    "sectors",
+    "evidenceSummary"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "project": {
+      "const": "DogWars Mobile"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "scopeVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "overallGameCompletionPercent": {
+      "type": "null"
+    },
+    "overallCompletionReason": {
+      "type": "string"
+    },
+    "nativeIphoneTested": {
+      "type": "boolean"
+    },
+    "playableGameBuildAvailable": {
+      "type": "boolean"
+    },
+    "ipaAvailable": {
+      "type": "boolean"
+    },
+    "sourceReference": {
+      "type": "object",
+      "required": [
+        "game",
+        "platform",
+        "appId",
+        "steamBuildId",
+        "gameChangelist",
+        "evidenceType"
+      ],
+      "additionalProperties": {
+        "type": [
+          "string",
+          "integer"
+        ]
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "required": [
+        "method",
+        "weights",
+        "meaning",
+        "denominatorPolicy"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "summary",
+          "reference"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sectors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "tasks"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "tasks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "label",
+                "status"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "pending",
+                    "completed"
+                  ]
+                },
+                "receipt": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "evidenceSummary": {
+      "type": "object",
+      "required": [
+        "sourceInventory",
+        "communityCatalog",
+        "ownedSourceKeylessExport",
+        "archiveInputs",
+        "nativeGameRuntime"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "sourceInventory": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "integer",
+              "boolean"
+            ]
+          }
+        },
+        "communityCatalog": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "integer",
+              "boolean"
+            ]
+          }
+        },
+        "ownedSourceKeylessExport": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "integer",
+              "boolean"
+            ]
+          }
+        },
+        "archiveInputs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "integer",
+              "boolean"
+            ]
+          }
+        },
+        "nativeGameRuntime": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "integer",
+              "boolean"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

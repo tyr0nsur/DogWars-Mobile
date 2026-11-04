@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "project": "DogWars Mobile",
+  "updated": "2026-11-04",
+  "scopeVersion": "m0-2026-11-04",
+  "stage": "Research and private recovery lab",
+  "target": "iPhone first; independent multiplayer research",
+  "overallGameCompletionPercent": null,
+  "overallCompletionReason": "The complete original-game implementation denominator is not yet known.",
+  "nativeIphoneTested": false,
+  "playableGameBuildAvailable": false,
+  "ipaAvailable": false,
+  "sourceReference": {
+    "game": "WARDOGS",
+    "developer": "BULKHEAD",
+    "publisher": "Team17",
+    "platform": "Steam",
+    "appId": 1867240,
+    "steamBuildId": "25937608",
+    "gameChangelist": "516586",
+    "documentedCommunityEngine": "5.7.4",
+    "evidenceType": "Local source metadata plus public community reference; not in-game runtime validation."
+  },
+  "measurement": {
+    "method": "completed checklist tasks divided by all listed tasks within each sector",
+    "weights": "one task equals one unit within its sector",
+    "meaning": "Progress through the fixed checklist, not percentage of game code, features, effort, or playability.",
+    "denominatorPolicy": "Any task addition, deletion or replacement requires a scopeVersion change and an entry in the milestone notes."
+  },
+  "receipts": [
+    {
+      "id": "m0-source-build",
+      "kind": "local-metadata",
+      "summary": "Source build identifiers were recorded in the private lab. No game files or private paths are published.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-research",
+      "kind": "documentation-review",
+      "summary": "Primary community repositories and official native build documentation were reviewed.",
+      "reference": "docs/milestones/M0-2026-11-04.md#references"
+    },
+    {
+      "id": "m0-recovery-host",
+      "kind": "source-staging",
+      "summary": "A private UE 5.7 recovery host with Game, Editor, Client and Server targets was staged. It contains no recovered gameplay implementation.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-build-entrypoints",
+      "kind": "static-validation",
+      "summary": "Private Windows and Mac build scripts passed grouped syntax/preflight checks. Unreal compilation was not run.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-extractor-build",
+      "kind": "native-tool-build",
+      "summary": "Offline WdExtract build succeeded against pinned CUE4Parse commit 0415fe26eeba66ac0d814c2547b098219682066f. This is an extraction tool build, not a game build.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-reconstruction-tools",
+      "kind": "tool-staging",
+      "summary": "Six recovery/analysis tools were staged with source/version/hash receipts. Reflection was staged into the private recovery host and enabled for Editor only. Mirror managed publish and Ghidra launcher checks succeeded; no game import or Unreal compilation was performed.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-package-inventory",
+      "kind": "static-container-inventory",
+      "summary": "Versioned source inventory records 308 files, 48,905,452,140 bytes, 75 PAK containers and 17 IoStore TOCs, including 15 encrypted TOCs and 150,663 chunk entries. Chunk entries are not asset counts. The isolated source copy matches all 308 file sizes and 98 selected executable/index hashes; UCAS bulk SHA-256 verification was not performed.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-community-catalog",
+      "kind": "public-community-input-parsing",
+      "summary": "Parsed 6,864 public community JSON files into a private recovery catalog: 337,088,261 bytes and 18,659 exports, with 1,175 files containing Blueprint-generated classes. These are public community exports, not fresh decoding of the owned source build.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-optional-bulk",
+      "kind": "keyless-source-export",
+      "summary": "A keyless probe copied two optional texture bulk payloads from the source, each 33,554,432 bytes, using decoder 2.9.16. These are raw bulk payloads, not reconstructed textures, geometry or playable assets.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m0-input-probe",
+      "kind": "synthetic-tool-validation",
+      "summary": "A private input-discovery utility passed synthetic positive and negative fixtures. A published archive-key candidate was rejected by normal mounting of this source build; no matching key was recovered and current-build mappings remain unresolved.",
+      "reference": "docs/milestones/M0-2026-11-04.md#evidence"
+    }
+  ],
+  "sectors": [
+    {
+      "id": "tooling",
+      "label": "Lab and toolchain",
+      "tasks": [
+        {
+          "id": "T01",
+          "label": "Record the installed source build metadata",
+          "status": "completed",
+          "receipt": "m0-source-build"
+        },
+        {
+          "id": "T02",
+          "label": "Review primary community recovery tools and their limits",
+          "status": "completed",
+          "receipt": "m0-research"
+        },
+        {
+          "id": "T03",
+          "label": "Stage a private Unreal recovery host and native build targets",
+          "status": "completed",
+          "receipt": "m0-recovery-host"
+        },
+        {
+          "id": "T04",
+          "label": "Stage Windows and Mac build entrypoints",
+          "status": "completed",
+          "receipt": "m0-build-entrypoints"
+        },
+        {
+          "id": "T05",
+          "label": "Build the offline extractor and retain its receipt",
+          "status": "completed",
+          "receipt": "m0-extractor-build"
+        },
+        {
+          "id": "T06",
+          "label": "Stage and reconcile asset reconstruction tools",
+          "status": "completed",
+          "receipt": "m0-reconstruction-tools"
+        },
+        {
+          "id": "T07",
+          "label": "Configure the matching Unreal C++ toolchain",
+          "status": "pending"
+        },
+        {
+          "id": "T08",
+          "label": "Complete one end-to-end recovery toolchain integration checkpoint",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data recovery",
+      "tasks": [
+        {
+          "id": "D01",
+          "label": "Produce a versioned package inventory",
+          "status": "completed",
+          "receipt": "m0-package-inventory"
+        },
+        {
+          "id": "D02",
+          "label": "Match the required package mappings to the source build",
+          "status": "pending"
+        },
+        {
+          "id": "D03",
+          "label": "Export the selected game data tables",
+          "status": "pending"
+        },
+        {
+          "id": "D04",
+          "label": "Export representative geometry and animation",
+          "status": "pending"
+        },
+        {
+          "id": "D05",
+          "label": "Produce an asset dependency and failure inventory",
+          "status": "pending"
+        },
+        {
+          "id": "D06",
+          "label": "Reconcile exported data against the inventory",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "native",
+      "label": "Native code reconstruction",
+      "tasks": [
+        {
+          "id": "N01",
+          "label": "Inventory original native modules and custom types",
+          "status": "pending"
+        },
+        {
+          "id": "N02",
+          "label": "Resolve required reflected class definitions",
+          "status": "pending"
+        },
+        {
+          "id": "N03",
+          "label": "Recover or independently implement the required function bodies",
+          "status": "pending"
+        },
+        {
+          "id": "N04",
+          "label": "Integrate the recovered native modules",
+          "status": "pending"
+        },
+        {
+          "id": "N05",
+          "label": "Build the integrated client with the matching engine",
+          "status": "pending"
+        },
+        {
+          "id": "N06",
+          "label": "Record behavioral comparisons with the source game",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "maps",
+      "label": "Maps and visual content",
+      "tasks": [
+        {
+          "id": "M01",
+          "label": "Inventory original worlds and streaming dependencies",
+          "status": "pending"
+        },
+        {
+          "id": "M02",
+          "label": "Reconstruct representative supported assets in the editor",
+          "status": "pending"
+        },
+        {
+          "id": "M03",
+          "label": "Integrate terrain and collision",
+          "status": "pending"
+        },
+        {
+          "id": "M04",
+          "label": "Integrate world placement and streaming",
+          "status": "pending"
+        },
+        {
+          "id": "M05",
+          "label": "Adapt rendering and materials for the iPhone target",
+          "status": "pending"
+        },
+        {
+          "id": "M06",
+          "label": "Record map traversal and collision results",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "gameplay",
+      "label": "Gameplay systems",
+      "tasks": [
+        {
+          "id": "G01",
+          "label": "Integrate player movement and interaction",
+          "status": "pending"
+        },
+        {
+          "id": "G02",
+          "label": "Integrate weapons and damage",
+          "status": "pending"
+        },
+        {
+          "id": "G03",
+          "label": "Integrate inventory and equipment",
+          "status": "pending"
+        },
+        {
+          "id": "G04",
+          "label": "Integrate building and logistics",
+          "status": "pending"
+        },
+        {
+          "id": "G05",
+          "label": "Integrate objectives and match rules",
+          "status": "pending"
+        },
+        {
+          "id": "G06",
+          "label": "Integrate progression and the selected economy model",
+          "status": "pending"
+        },
+        {
+          "id": "G07",
+          "label": "Run a documented integrated gameplay session",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "vehicles",
+      "label": "Vehicles",
+      "tasks": [
+        {
+          "id": "V01",
+          "label": "Inventory vehicle classes and dependencies",
+          "status": "pending"
+        },
+        {
+          "id": "V02",
+          "label": "Integrate vehicle bodies, seats and collision",
+          "status": "pending"
+        },
+        {
+          "id": "V03",
+          "label": "Integrate ground vehicle behavior",
+          "status": "pending"
+        },
+        {
+          "id": "V04",
+          "label": "Integrate aircraft behavior",
+          "status": "pending"
+        },
+        {
+          "id": "V05",
+          "label": "Integrate vehicle damage and networking",
+          "status": "pending"
+        },
+        {
+          "id": "V06",
+          "label": "Record integrated vehicle-session results",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "servers",
+      "label": "Independent multiplayer",
+      "tasks": [
+        {
+          "id": "S01",
+          "label": "Define the independent service and simulation boundaries",
+          "status": "pending"
+        },
+        {
+          "id": "S02",
+          "label": "Build the dedicated simulation target",
+          "status": "pending"
+        },
+        {
+          "id": "S03",
+          "label": "Implement required independent session and persistence services",
+          "status": "pending"
+        },
+        {
+          "id": "S04",
+          "label": "Connect two controlled clients",
+          "status": "pending"
+        },
+        {
+          "id": "S05",
+          "label": "Verify replicated gameplay and reconnect behavior",
+          "status": "pending"
+        },
+        {
+          "id": "S06",
+          "label": "Record an integrated multiplayer session",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "iphone",
+      "label": "iPhone delivery and runtime",
+      "tasks": [
+        {
+          "id": "I01",
+          "label": "Configure a matching Mac, Xcode and Unreal toolchain",
+          "status": "pending"
+        },
+        {
+          "id": "I02",
+          "label": "Configure signing without publishing private material",
+          "status": "pending"
+        },
+        {
+          "id": "I03",
+          "label": "Compile the integrated iOS client",
+          "status": "pending"
+        },
+        {
+          "id": "I04",
+          "label": "Package and install a device build",
+          "status": "pending"
+        },
+        {
+          "id": "I05",
+          "label": "Run recovered content on a physical iPhone",
+          "status": "pending"
+        },
+        {
+          "id": "I06",
+          "label": "Integrate and exercise touch and controller input",
+          "status": "pending"
+        },
+        {
+          "id": "I07",
+          "label": "Measure sustained frame time, memory and thermal behavior",
+          "status": "pending"
+        },
+        {
+          "id": "I08",
+          "label": "Run a documented iPhone multiplayer session",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "evidenceSummary": {
+    "sourceInventory": {
+      "files": 308,
+      "bytes": 48905452140,
+      "pakContainers": 75,
+      "ioStoreTocs": 17,
+      "encryptedIoStoreTocs": 15,
+      "chunkEntries": 150663,
+      "chunkEntriesAreAssetCount": false,
+      "copyVerifiedCompleteAtCheckpoint": true,
+      "selectedIndexAndBinaryHashesMatched": 98,
+      "bulkUcasSha256Checked": false,
+      "copiedSizeMatchingFiles": 308,
+      "copyVerificationMeaning": "308 file sizes matched and 98 selected executable/index hashes matched; UCAS bulk SHA-256 verification was not performed."
+    },
+    "communityCatalog": {
+      "sourceKind": "PUBLIC_COMMUNITY_EXPORT_NOT_LOCAL_DECODE",
+      "jsonFilesParsed": 6864,
+      "bytes": 337088261,
+      "exports": 18659,
+      "blueprintGeneratedClassFiles": 1175,
+      "freshOwnedBuildDecode": false
+    },
+    "ownedSourceKeylessExport": {
+      "optionalTextureBulkPayloads": 2,
+      "bytesEach": 33554432,
+      "totalBytes": 67108864,
+      "decoderVersion": "2.9.16",
+      "completeTextureOrGeometryAssetsRecovered": 0
+    },
+    "archiveInputs": {
+      "matchingKeyRecovered": false,
+      "publishedCandidateMount": "rejected",
+      "currentBuildMappings": "unresolved"
+    },
+    "nativeGameRuntime": {
+      "originalGameplayFunctionsRecovered": 0,
+      "gameAssetsImportedIntoEditor": 0,
+      "gameClientCompiled": false,
+      "independentServerValidated": false,
+      "iphoneBuildProduced": false
+    }
+  }
+}
