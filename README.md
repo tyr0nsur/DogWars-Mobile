@@ -8,11 +8,11 @@ DogWars Mobile has started investigating how WARDOGS could be reconstructed and 
 
 This repository is the **public development record**. Game files, recovered game material, private implementation source, credentials and raw lab logs stay outside it. This is an unofficial project, with no affiliation or endorsement from BULKHEAD, Team17, Epic Games or Apple.
 
-**Latest checkpoint: [M1 — static bootstrap and archive-access investigation](docs/milestones/M1-2026-11-04.md).** Startup boundaries and two AES routines have been investigated; the current archive key remains unresolved. The archive inventory now distinguishes 17 Unreal PAKs from 58 Chromium resource packs.
+**Latest checkpoint: [M2 — first bootstrap transfer resolved statically](docs/milestones/M2-2026-11-04.md).** Hash and lookup proofs resolve the first protected-startup transfer in the stated initial-image model. The next indirect transfer and current archive key remain unresolved.
 
 | Current status — 4 November 2026 | Evidence boundary |
 | --- | --- |
-| Static bootstrap and archive-access investigation | Bounded Ghidra traces, format validation and independent candidate checks |
+| First bootstrap transfer resolved statically | Versioned SSA, independent raw checks, certified hash/index calculations and an explicit initial-memory model |
 | Offline extractor built; recovery tools and private Unreal host staged | Tool builds and grouped static checks; no game or Unreal compilation yet |
 | Versioned source package inventory produced | 308 files; 17 Unreal PAKs, 58 Chromium DataPacks and 17 IoStore TOCs; chunk entries are not assets |
 | Public community data catalog parsed | 6,864 JSON files; public exports, not fresh local game decoding |
@@ -34,6 +34,7 @@ The source of truth is [data/progress.json](data/progress.json), with its [schem
 
 ## Milestones and releases
 
+- [M2 — First bootstrap transfer resolved statically](docs/milestones/M2-2026-11-04.md): proved dispatch calculation, selected code range and normalized branch analysis; archive key still unresolved.
 - [M1 — Static bootstrap and archive-access investigation](docs/milestones/M1-2026-11-04.md): loader/session boundaries, AES helper evidence and a corrected package inventory.
 - [M0 — Research and recovery lab opened](docs/milestones/M0-2026-11-04.md): the initial public checkpoint.
 - **Next — Recovery inventory:** establish version-compatible package inputs, produce extraction/dependency receipts and identify unsupported content.
@@ -55,4 +56,4 @@ Announcements belong in this README, the [milestone record](docs/milestones/) an
 
 ## Español
 
-**DogWars Mobile continúa la investigación privada, con iPhone como primer objetivo. El hito M1 documenta el arranque protegido y la revisión de candidatos; la clave actual sigue sin recuperarse.** Este repositorio publica avances y evidencia resumida. Todavía no hay un juego completo, una IPA disponible, pruebas en iPhone ni un servidor independiente validado. Las barras miden tareas concretas de cada sector; no representan el porcentaje del juego porteado. El código de implementación y los archivos del juego permanecen privados.
+**DogWars Mobile continúa la investigación privada, con iPhone como primer objetivo. M2 resuelve estáticamente el primer salto protegido para el modelo inicial documentado; la clave de los paquetes sigue sin recuperarse.** Este repositorio publica avances y evidencia resumida. Todavía no hay un juego completo, una IPA disponible, pruebas en iPhone ni un servidor independiente validado. Las barras miden tareas concretas de cada sector; no representan el porcentaje del juego porteado. El código de implementación y los archivos del juego permanecen privados.

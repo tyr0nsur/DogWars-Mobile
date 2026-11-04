@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-04 — M2: first bootstrap transfer resolved statically
+
+- Recovered the terminal's exact base-relative XOR expression using versioned Ghidra SSA and independent raw checks.
+- Certified the complete operand hash chain and both lookup calculations, preserving a symbolic effective image base.
+- Composed the selected initial-image table entry with a raw pre-read write audit and a valid executable function boundary.
+- Decompiled the selected code range and removed three proved false branch paths in a discarded synthetic analysis view.
+- Recorded the next indirect-transfer/frame boundary. No archive key, complete executable recovery, game build or IPA is claimed.
+- Checklist task counts and per-sector graphs remain unchanged.
+
 ## 2026-11-04 — M1: static bootstrap and archive-access investigation
 
 - Traced selected loader and launcher boundaries in private Ghidra projects; no target program/service was executed.

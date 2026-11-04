@@ -3,7 +3,7 @@
   "project": "DogWars Mobile",
   "updated": "2026-11-04",
   "scopeVersion": "m0-2026-11-04",
-  "stage": "M1: static bootstrap and archive-access investigation",
+  "stage": "M2: first bootstrap transfer resolved in the stated initial-image model",
   "target": "iPhone first; independent multiplayer research",
   "overallGameCompletionPercent": null,
   "overallCompletionReason": "The complete original-game implementation denominator is not yet known.",
@@ -153,6 +153,48 @@
       "kind": "passive-container-and-static-analysis",
       "summary": "Embedded MSI and service/control programs extracted as data; modular session boundaries recorded, no installation or key recovery.",
       "reference": "docs/milestones/M1-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-ssa-slice",
+      "kind": "versioned-static-analysis",
+      "summary": "Finite terminal SSA slice exported and correlated with the exact copied code range.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-frame-context",
+      "kind": "independent-raw-and-algebraic-checks",
+      "summary": "Saved-frame loads, context-pointer reload and return-site storage verified without inventing uninitialized values.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-tail-identity",
+      "kind": "independent-formal-reduction",
+      "summary": "Exact base-relative XOR tail identity checked against versioned SSA and raw spill/alias evidence.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-hash-chain",
+      "kind": "exhaustive-bit-polynomial-identities",
+      "summary": "All 36 rounds of the operand hash chain certified, with effective image base kept symbolic.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-table-control",
+      "kind": "formal-index-and-raw-control-checks",
+      "summary": "Both eight-round table index calculations and their guarded control roles verified within the stated initialization scope.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-resolved-transfer",
+      "kind": "composed-static-initial-image-proof",
+      "summary": "Hash, indices, initial table data, raw pre-read write audit and executable range compose into a selected transfer; no live-memory claim.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
+    },
+    {
+      "id": "m2-selected-target",
+      "kind": "focal-decompile-and-discarded-analysis-view",
+      "summary": "Selected code range byte-correlated and decompiled; three proved branch outcomes produce an acyclic synthetic view, discarded after analysis.",
+      "reference": "docs/milestones/M2-2026-11-04.md#evidence"
     }
   ],
   "sectors": [
@@ -542,12 +584,31 @@
       "stateProcessorGhidraInstructions": 13047,
       "boundedMultiFunctionTraceInstructions": 13139,
       "stateProcessorDecompilerCompleted": true,
-      "stateProcessorIndirectTargetResolved": false,
+      "stateProcessorIndirectTargetResolved": true,
       "restoredLayoutMatchingSections": 10,
       "restoredDecodedCodeIdentityVerified": false,
       "bootstrapProgramsExtractedPassively": 2,
       "bootstrapProgramsExecuted": false,
-      "bootstrapNewKeyCandidates": 0
+      "bootstrapNewKeyCandidates": 0,
+      "stateProcessorResolutionScope": "Traced INIT entry in an explicit initial-image model; not observed process memory or all wrappers.",
+      "stateTargetSsaNodes": 5349,
+      "stateTargetSsaOperations": 4494,
+      "runtimeContextPointerReloadProven": true,
+      "stateHashOperandRoundsProven": 36,
+      "statePrimaryIndexRoundsProven": 8,
+      "stateSecondaryIndexRoundsProven": 8,
+      "stateConcreteInitialTransferSelected": true,
+      "stateSelectedTargetBytes": 6443,
+      "stateSelectedTargetRawMemoryEqual": true,
+      "stateSelectedTargetDecompiled": true,
+      "stateSelectedTargetFalseBranchGuardsProven": 3,
+      "stateSelectedTargetOriginalCfgBlocks": 128,
+      "stateSelectedTargetNormalizedCfgBlocks": 122,
+      "stateSelectedTargetNormalizedCfgAcyclic": true,
+      "syntheticAnalysisChangesDiscarded": true,
+      "nextIndirectTargetResolved": false,
+      "nextIndirectTargetSliceNodes": 49,
+      "nextIndirectTargetRetainedBarriers": 5
     }
   }
 }
